@@ -133,13 +133,15 @@ const App = () => {
             onChange={(e) => setSearchval(e.target.value)}
           />
         </label>
-        {results.map((result) => (
-          <div className="col-lg-4" key={result.id}>
-            <p>{result.title}</p>
-            <img src={`${result.images['fixed_height'].url}`} />
+      </div>
+      <div className="wrapper">
+      {results.map((result) => (
+          <div key={result.id}>
+            <p className="text-center"><b>{result.title}</b></p>
+            <img src={`${result.images['fixed_height'].url}`} width='300' height= '250' style={{margin:10}} />
           </div>
         ))}
-      </div>
+        </div>
     </React.Fragment>
   );
 };
